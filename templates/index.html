@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block page_title %}Home - 云动安顺{% endblock %}
+
+{% block main_content %}
+    <div class="row">
+    {% for item in items %}
+        <div class="col-sm-3">
+    <ul class="media-list">
+        <li class="media">
+            <div class="media-left">
+                <a href="{{ item['mobile_link'] }}">
+                    <img class="media-object" src="{{ item['thumb'] }}" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <p class="media-heading">{{ item['title'] }}</p>
+            </div>
+        </li>
+    </ul>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+
